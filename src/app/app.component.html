@@ -1,0 +1,253 @@
+
+<!-- Toolbar -->
+<div class="toolbar" role="banner">
+  <img
+    width="40"
+    alt="Angular Logo"
+    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="
+  />
+  <span>Project Score Calculator</span>
+    <div class="spacer"></div>
+    
+</div>
+
+<div class="content" role="main">
+
+<div class="row">
+  <div class="col-md-4">
+    
+    <ul class="list-group">
+      <li class="list-group-item active">Configuration</li>
+      <li class="list-group-item">
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+            <div class="row">
+              <div class="col-md-6">No of Students</div>
+              <div class="col-md-4"><input type="number" class="form-control" [(ngModel)]="nrStuds" name="nrStuds" id="nrStuds" > </div>
+          </div>
+        </li>
+      <li class="list-group-item">
+        <div class="row">
+          <div class="col-md-6">Problem statement and I/O weight</div>
+          <div class="col-md-4"><input type="number" class="form-control" [(ngModel)]="psIOwt"  name="psIOwt" id="psIOwt" > </div>
+      </div>
+      </li>
+      <li class="list-group-item">
+        <div class="row">
+          <div class="col-md-6">Walkthroughs weight</div>
+          <div class="col-md-4"><input type="number" class="form-control" [(ngModel)]="wlkThruWt" name="wlkThruWt" id="wlkThruWt" > </div>
+      </div>
+      </li>
+      <li class="list-group-item">
+        <div class="row">
+          <div class="col-md-6">Essential model weight</div>
+          <div class="col-md-4"> <input type="number" class="form-control" [(ngModel)]="essenMdlWt" name="essenMdlWt" id="essenMdlWt" ></div>
+      </div>
+      </li>
+      <li class="list-group-item">
+        <div class="row">
+          <div class="col-md-6">Implementation model weight</div>
+          <div class="col-md-4"><input type="number" class="form-control" [(ngModel)]="impMdlWt" name="impMdlWt" id="impMdlWt" > </div>
+      </div>
+      </li>
+      <li class="list-group-item">
+        <div class="row">
+          <div class="col-md-6">Code weight</div>
+          <div class="col-md-4"> <input type="number" class="form-control" [(ngModel)]="codeWt" name="codeWt" id="codeWt" ></div>
+      </div>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+  </div>
+
+  <div class="col-md-5">
+    <ul class="list-group">
+      <li class="list-group-item active">Project Score Calculator</li>
+      <li class="list-group-item">
+
+    <ul class="list-group">
+      <li class="list-group-item active">
+        Add Student Scores
+      </li>
+      <li class="list-group-item">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <div class="row">
+                  <div class="col-md-6">
+                    <label for="studId">Student ID</label>
+                  </div>
+                  <div class="col-md-6">
+                    <input type="number" class="form-control" [(ngModel)]="studId"  name="studId" id="studId" placeholder="Student ID" >
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <div class="row">
+                  <div class="col-md-6">
+                    <label for="psIOScr">Problem statement and I/O design score</label>
+                  </div>
+                  <div class="col-md-6">
+                    <input type="number" class="form-control" name="psIOScr" [(ngModel)]="psIOScr" id="psIOScr" placeholder="Problem statement and I/O design score" >
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div><br/>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <div class="row">
+                  <div class="col-md-6">
+                    <label for="wlkThruScr">Walkthroughs score</label>
+                  </div>
+                  <div class="col-md-6">
+                    <input type="number" class="form-control" name="wlkThruScr" [(ngModel)]="wlkThruScr" id="wlkThruScr" placeholder="Walkthroughs score" >
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <div class="row">
+                  <div class="col-md-6">
+                    <label for="essenMdlScr">Essential model score</label>
+                  </div>
+                  <div class="col-md-6">
+                    <input type="number" class="form-control" name="essenMdlScr" [(ngModel)]="essenMdlScr"  id="essenMdlScr" placeholder="Essential model score" >
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div><br/>
+          
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <div class="row">
+                  <div class="col-md-6">
+                    <label for="impMdlScr">Implementation model score</label>
+                  </div>
+                  <div class="col-md-6">
+                    <input type="number" class="form-control" name="impMdlScr" [(ngModel)]="impMdlScr" id="impMdlScr" placeholder="Implementation model score" >
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <div class="row">
+                  <div class="col-md-6">
+                    <label for="codeScr">Code score</label>
+                  </div>
+                  <div class="col-md-6">
+                    <input type="number" class="form-control" name="codeScr" [(ngModel)]="codeScr" id="codeScr" placeholder="Code score" >
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div><br>
+
+        <div class="row">
+          <div class="col-md-12" style="text-align: center;">
+            <button class="btn btn-primary btn-md align-right" (click)="save()">Save</button>
+          </div>
+        </div>
+          
+      </li>
+    </ul><br/>
+    <ul class="list-group">
+      <li class="list-group-item active">
+        Student Scores
+      </li>
+      <li class="list-group-item">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Student ID</th>
+              <th scope="col">Weighted overall percentage score </th>
+              <th scope="col">Grade</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor ="let score of scores; index as i;">
+              <th scope="row">{{ i + 1 }}</th>
+              <td>{{ score.studentId }}</td>
+              <td>{{ score.weight }}</td>
+              <td>{{ score.grade }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </li>
+</ul>
+</li>
+</ul>
+  </div>
+
+  <div class="col-md-3">
+    <ul class="list-group">
+      <li class="list-group-item active">Summary</li>
+      <li class="list-group-item">
+
+        <ul class="list-group list-group-flush" *ngIf="scores.length == nrStuds && nrStuds != 0">
+          <li class="list-group-item">
+            <div class="row">
+              <div class="col-md-6">
+                  Class Average
+              </div>
+              <div class="col-md-6"></div>
+                {{classAvg}}
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="row">
+              <div class="col-md-6">
+                  High Score
+              </div>
+              <div class="col-md-6"></div>
+                {{highScore}}
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="row">
+              <div class="col-md-6">
+                  High Student
+              </div>
+              <div class="col-md-6"></div>
+                  {{highStud}}
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="row">
+              <div class="col-md-6">
+                  Low Score
+              </div>
+              <div class="col-md-6"></div>
+                {{lowScore}}
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="row">
+              <div class="col-md-6">
+                  Low Student
+              </div>
+              <div class="col-md-6"></div>
+                {{lowStud}}
+            </div>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+  </div>
+
+</div>
+  
+</div>
+
